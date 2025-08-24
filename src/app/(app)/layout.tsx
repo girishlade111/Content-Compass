@@ -65,15 +65,16 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <SidebarMenu>
             {navItems.map((item) => (
               <SidebarMenuItem key={item.href}>
-                <Link href={item.href} passHref legacyBehavior>
-                  <SidebarMenuButton
-                    isActive={pathname.startsWith(item.href)}
-                    tooltip={item.label}
-                  >
+                <SidebarMenuButton
+                  asChild
+                  isActive={pathname.startsWith(item.href)}
+                  tooltip={item.label}
+                >
+                  <Link href={item.href}>
                     <item.icon />
                     <span>{item.label}</span>
-                  </SidebarMenuButton>
-                </Link>
+                  </Link>
+                </SidebarMenuButton>
               </SidebarMenuItem>
             ))}
           </SidebarMenu>
@@ -81,11 +82,17 @@ export default function AppLayout({ children }: { children: ReactNode }) {
         <SidebarFooter>
           <div className="flex items-center justify-center gap-2 group-data-[collapsible=icon]:gap-4 group-data-[collapsible=icon]:flex-col">
             {socialLinks.map(link => (
-              <Link href={link.href} key={link.href} target="_blank" rel="noopener noreferrer">
-                <SidebarMenuButton tooltip={link.label} size="icon" className="group-data-[collapsible=icon]:w-8 group-data-[collapsible=icon]:h-8">
+              <SidebarMenuButton
+                asChild
+                tooltip={link.label}
+                size="icon"
+                className="group-data-[collapsible=icon]:w-8 group-data-[collapsible=icon]:h-8"
+                key={link.href}
+              >
+                <Link href={link.href} target="_blank" rel="noopener noreferrer">
                   <link.icon className="h-4 w-4" />
-                </SidebarMenuButton>
-              </Link>
+                </Link>
+              </SidebarMenuButton>
             ))}
           </div>
         </SidebarFooter>
