@@ -20,24 +20,24 @@ export default function DashboardPage() {
       
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
-          <CardHeader>
-            <CardTitle>Total Views</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Total Views</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">{totalViews.toLocaleString()}</p>
           </CardContent>
         </Card>
         <Card>
-          <CardHeader>
-            <CardTitle>Total Shares</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Total Shares</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">{totalShares.toLocaleString()}</p>
           </CardContent>
         </Card>
         <Card>
-          <CardHeader>
-            <CardTitle>Total Conversions</CardTitle>
+          <CardHeader className='pb-2'>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Total Conversions</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">{totalConversions.toLocaleString()}</p>
