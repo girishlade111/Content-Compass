@@ -51,3 +51,7 @@ To get started with this application, you can simply run it in a development env
 -   **[ShadCN UI](https://ui.shadcn.com/)**: A collection of beautifully designed, accessible, and reusable components.
 -   **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
 -   **[Lucide React](https://lucide.dev/)**: A beautiful and consistent icon library.
+
+---
+
+Built by Girish Lade — https://ladestack.in
